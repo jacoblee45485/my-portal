@@ -9,7 +9,7 @@ st.set_page_config(page_title="Giant Foodsystem 통합 포털", page_icon="🏢"
 # Unsplash의 고품질 물류/유통 배경 이미지 위에 어두운 오버레이를 씌워 글씨가 잘 보이게 합니다.
 hero_banner = """
 <div style="
-    background-image: linear-gradient(rgba(15, 76, 129, 0.8), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1586528116311-ad8ed7c80a71?q=80&w=2070&auto=format&fit=crop');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1586528116311-ad8ed7c80a71?q=80&w=2070&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
     padding: 60px 20px;
@@ -22,7 +22,9 @@ hero_banner = """
     <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 15px;">
         <!-- 회사 공식 도메인 아이콘 -->
         <img src="https://logo.clearbit.com/giantfoodusa.com" onerror="this.style.display='none'" style="height: 50px; border-radius: 8px; margin-right: 15px;">
-        <h1 style="font-size: 3.2rem; margin: 0; color: white; font-weight: 800; letter-spacing: -1px;">GIANT FOODSYSTEM</h1>
+        <h1 style="font-size: 3.2rem; margin: 0; font-weight: 800; letter-spacing: -1px;">
+            <span style="color: #FF3333;">GIANT</span> <span style="color: #FFFFFF;">FOODSYSTEM</span>
+        </h1>
     </div>
     <p style="font-size: 1.3rem; margin-top: 0; font-weight: 400; color: #E2E8F0;">#1 K-Food Distributor in USA · 사내 통합 관리 포털</p>
 </div>
