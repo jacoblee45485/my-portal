@@ -1,11 +1,18 @@
 import streamlit as st
 
 # 페이지 기본 설정
-st.set_page_config(page_title="사내 통합 관리 포털", page_icon="🏢", layout="centered")
+st.set_page_config(page_title="Giant Food System 통합 포털", page_icon="🏢", layout="centered")
 
-# 메인 타이틀
-st.title("🏢 우리 회사 통합 관리 포털")
-st.markdown("#### 원하시는 업무 시스템을 선택해 주세요.")
+# 🌟 Giant Food System 공식 로고 추가
+# 회사 도메인(giantfoodusa.com)을 인식하여 로고를 자동으로 불러옵니다.
+col_img1, col_img2, col_img3 = st.columns([1.5, 1, 1.5])
+with col_img2:
+    # 만약 로고가 안 나오거나 다른 이미지로 바꾸고 싶다면 아래 링크 대신 "logo.png" 처럼 파일 이름을 넣으시면 됩니다.
+    st.image("https://logo.clearbit.com/giantfoodusa.com", use_container_width=True)
+
+# 메인 타이틀 (가운데 정렬)
+st.markdown("<h1 style='text-align: center;'>Giant Food System 통합 포털</h1>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center; color: #666;'>원하시는 업무 시스템을 선택해 주세요.</h4>", unsafe_allow_html=True)
 st.markdown("---")
 
 # 2칸으로 나누어서 메뉴판 만들기
@@ -15,7 +22,7 @@ with col1:
     st.markdown("### 🚚 물류 및 차량 관리")
     st.info("트럭, 트레일러, 장비 현황 및 사고/티켓 내역을 관리하는 대시보드입니다.")
     
-    # 🚨 여기에 방금 배포하신 트럭 대시보드의 실제 인터넷 주소(URL)를 넣어주세요!
+    # 트럭 대시보드 실제 인터넷 주소(URL)
     TRUCK_APP_URL = "https://my-truck-dashboard-rwtytrjvzqzzdcnzlhn2j3.streamlit.app" 
     
     st.link_button("👉 트럭 관리 대시보드 열기", TRUCK_APP_URL, use_container_width=True)
