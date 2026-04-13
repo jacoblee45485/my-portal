@@ -6,27 +6,27 @@ st.set_page_config(page_title="Giant Foodsystem 통합 포털", page_icon="🏢"
 # =====================================================================
 # 🎨 1. 맞춤형 히어로 배너 (회사 배경 이미지 및 로고 디자인)
 # =====================================================================
-# Unsplash의 고품질 물류/유통 배경 이미지 위에 어두운 오버레이를 씌워 글씨가 잘 보이게 합니다.
+# 너무 어둡지 않게 필터(투명도 0.4~0.5)를 조절하고, 상자 크기를 세련되게 줄였습니다.
 hero_banner = """
 <div style="
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1586528116311-ad8ed7c80a71?q=80&w=2070&auto=format&fit=crop');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1586528116311-ad8ed7c80a71?q=80&w=2070&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
-    padding: 60px 20px;
-    border-radius: 16px;
+    padding: 40px 20px; 
+    border-radius: 12px;
     text-align: center;
     color: white;
     margin-bottom: 30px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 ">
-    <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 15px;">
+    <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 10px;">
         <!-- 회사 공식 도메인 아이콘 -->
-        <img src="https://logo.clearbit.com/giantfoodusa.com" onerror="this.style.display='none'" style="height: 50px; border-radius: 8px; margin-right: 15px;">
-        <h1 style="font-size: 3.2rem; margin: 0; font-weight: 800; letter-spacing: -1px;">
+        <img src="https://logo.clearbit.com/giantfoodusa.com" onerror="this.style.display='none'" style="height: 45px; border-radius: 8px; margin-right: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+        <h1 style="font-size: 2.8rem; margin: 0; font-weight: 800; letter-spacing: -1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
             <span style="color: #FF3333;">GIANT</span> <span style="color: #FFFFFF;">FOODSYSTEM</span>
         </h1>
     </div>
-    <p style="font-size: 1.3rem; margin-top: 0; font-weight: 400; color: #E2E8F0;">#1 K-Food Distributor in USA · 사내 통합 관리 포털</p>
+    <p style="font-size: 1.1rem; margin-top: 0; font-weight: 400; color: #F1F5F9; text-shadow: 1px 1px 3px rgba(0,0,0,0.4);">#1 K-Food Distributor in USA · 사내 통합 관리 포털</p>
 </div>
 """
 st.markdown(hero_banner, unsafe_allow_html=True)
